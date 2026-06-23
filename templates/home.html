@@ -1,3 +1,63 @@
-<h1>
-    Boston House Pricing
-</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boston House Price Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300'rel='stylesheet'type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300'rel='stylesheet'type='text/css'>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Boston House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="CRIM">CRIM:</label>
+            <input type="text" id="CRIM" name="CRIM" required><br><br>
+
+            <label for="ZN">ZN:</label>
+            <input type="text" id="ZN" name="ZN" required><br><br>
+
+            <label for="INDUS">INDUS:</label>
+            <input type="text" id="INDUS" name="INDUS" required><br><br>
+
+            <label for="CHAS">CHAS:</label>
+            <input type="text" id="CHAS" name="CHAS" required><br><br>
+
+            <label for="NOX">NOX:</label>
+            <input type="text" id="NOX" name="NOX" required><br><br>
+
+            <label for="RM">RM:</label>
+            <input type="text" id="RM" name="RM" required><br><br>
+
+            <label for="AGE">AGE:</label>
+            <input type="text" id="AGE" name="AGE" required><br><br>
+
+            <label for="DIS">DIS:</label>
+            <input type="text" id="DIS" name="DIS" required><br><br>
+
+            <label for="RAD">RAD:</label>
+            <input type="text" id="RAD" name="RAD" required><br><br>
+
+            <label for="TAX">TAX:</label>
+            <input type="text" id="TAX" name="TAX" required><br><br>
+
+            <label for="PTRATIO">PTRATIO:</label>
+            <input type="text" id="PTRATIO" name="PTRATIO" required><br><br>
+
+            <label for="B">B:</label>
+            <input type="text" id="B" name="B" required><br><br>
+
+            <label for="LSTAT">LSTAT:</label>
+            <input type="text" id="LSTAT" name="LSTAT" required><br><br>
+
+            <input type="submit" value= "Predict">
+        </form>
+        </div>
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+</body>
+</html>
